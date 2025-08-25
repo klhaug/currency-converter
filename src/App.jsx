@@ -3,8 +3,7 @@ import { useState } from 'react';
 export default function App() {
 
   const [amount, setAmount] = useState(100);
-  const [convertFrom, setConvertFrom] = useState("")
-  const [convertTo, setConvertTo] = useState("")
+
 
   const handleSubmit =(e) => {
     e.preventDefault();
@@ -28,6 +27,8 @@ export default function App() {
                 value={amount}
                 onChange={((e) => setAmount(e.target.value))}
                 type="number"
+                min={0}
+                required
                 placeholder="$450"
                 className=" text-6xl rounded-md flex w-full justify-center border border-gray-300 items-center  bg-white px-4 py-6 "
               />
